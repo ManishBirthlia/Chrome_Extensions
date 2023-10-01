@@ -1,0 +1,19 @@
+{
+    "name":"Wiki Search",
+    "manifest_version":3,
+    "version":"1.0.0",
+    "permissions":["storage","tabs","notifications","contextMenus"],
+    "description":"This is a Wiki Search extension to Search easly on any website.",
+    "background":{
+        "service_worker":"eventPage.js"
+    },
+    "icons":{
+        "128":"icons_128.png",
+        "48":"icons_48.png",
+        "16":"icons_16.png"
+    },
+    "action":{
+        "default_icon":"icons_16.png",
+        "default_popup":"popup.html"
+    }
+}
