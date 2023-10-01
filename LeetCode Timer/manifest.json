@@ -1,0 +1,56 @@
+{
+  "name": "LeetCode Timer & Bookmarks",
+  "version": "0.1.0",
+  "description": "It moniters the time it look to solve the LeetCode problem & stores timeStamp as Bookmarks",
+  "permissions": [
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*"
+    ],
+      "js": [ "contentScript.js" ],
+      "css": [ "contentSideCSS.css" ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "style.css",
+        "images/hide.png",
+        "images/play.png",
+        "images/pause.png",
+        "images/replay.png",
+        "images/stop.png",
+        "images/view.png"
+      ],
+      "matches": [
+        "https://leetcode.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "images/CompanyLogo/Logo_2_16X16.png",
+    "32": "images/CompanyLogo/Logo_2_32X32.png",
+    "64": "images/CompanyLogo/Logo_2_64X64.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/CompanyLogo/Logo_2_16X16.png",
+      "32": "images/CompanyLogo/Logo_2_32X32.png",
+      "64": "images/CompanyLogo/Logo_2_64X64.png"
+    },
+    "default_title": "My LeetCode Timer",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}
